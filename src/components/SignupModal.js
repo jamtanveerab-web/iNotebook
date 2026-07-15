@@ -13,7 +13,8 @@ const SignupModal = (props) => {
             props.showAlert("Password do not match", "danger")
             return;
         }
-        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/auth/createuser`, {
+       const host = process.env.REACT_APP_BACKEND_URL || "http://localhost:5000";
+const response = await fetch(`${host}/api/auth/createuser`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

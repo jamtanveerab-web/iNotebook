@@ -8,7 +8,8 @@ const LoginModal = (props) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/auth/login`, {
+       const host = process.env.REACT_APP_BACKEND_URL || "http://localhost:5000";
+const response = await fetch(`${host}/api/auth/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
