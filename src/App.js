@@ -30,13 +30,12 @@ function App() {
   <NoteStates>
     <Router>
       <Navbar showAlert={showAlert} />
-
       <Routes>
         <Route path="/" element={localStorage.getItem("token") ? (<div style={{ backgroundColor: "#F9FAFB", minHeight: "100vh" }}><Alert alert={alert} /><div className="container"><Home showAlert={showAlert} /> </div></div>) : (<Navigate to="/login" replace />)}/>
-        <Route path="/about" element={<><Alert alert={alert} /><About /></>}/>
+        <Route path="/about" element={<><About /></>}/>
         <Route path="/login" element={<div style={{ backgroundColor: "#F9FAFB", minHeight: "100vh" }}><Alert alert={alert} /><div className="container"><Login showAlert={showAlert} /></div></div>}/>
           </Routes>
-      {localStorage.getItem("token") && <Footer />}
+      {!localStorage.getItem("token") && <Footer />}
     </Router>
   </NoteStates>
   );
