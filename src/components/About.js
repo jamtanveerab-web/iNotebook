@@ -1,5 +1,4 @@
 import React from 'react'
-import Footer from './Footer';
 
 const About = () => {
   return (
@@ -140,7 +139,15 @@ const About = () => {
 <div className="text-center mb-5"><h1>"The best tool is the one you actually use."</h1><br/> <span className=' text-muted'>— The iNotebook team</span></div>
         </div>
       </div>
-      <Footer/>
+      <footer className="bg-blue py-5 hee">
+      <div className="container">
+        <div className="text-center lee">
+          <h3 className="fw-bold">iNotebook</h3>
+          <p className="mb-0">Created By Tanveer ❤️</p>
+          <p className="mb-0">© 2026 iNotebook. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
     </div>
     
   )
