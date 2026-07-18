@@ -47,8 +47,8 @@ const response = await fetch(`${host}/api/auth/login`, {
                 <div className="container text-center mt-5">
                     <div className="hero-badge ">
                         <span className="text-uppercase custom">SIMPLE · FOCUSED · PRIVATE</span><br />
-                        <p className='fs-1 my-4 pt-5 pb-5'>Your notes,<br /><span style={{ color: '#4F39F6' }}>beautifully kept.</span></p>
-                        <p style={{ color: "#6A7282" }}>iNotebook is a minimal note-taking app that lets you capture ideas<br /> with a title, description, and tags — then find them again without<br /> effort.</p>
+                        <h1 className=' my-4 pt-5 pb-5'>Your notes,<br /><span style={{ color: '#4F39F6' }}>beautifully kept.</span></h1>
+                        <h4 style={{ color: "#6A7282" }}>iNotebook is a minimal note-taking app that lets you capture ideas<br /> with a title, description, and tags — then find them again without<br /> effort.</h4>
                         <div className="d-flex justify-content-center gap-3 p-2">
                             <button className="rounded-4 btn btn-primary" data-bs-toggle="modal" data-bs-target="#signupModal">Create free account</button>
                             <button className="rounded-4 btn btn-outline-secondary hoovr" onClick={onchase}>Log in</button>

@@ -27,22 +27,18 @@ function App() {
         }, 2000);
     }
   return (
-    <NoteStates>
-      <Router>
-        <div style={{backgroundColor:"#F9FAFB"}}>
-        <Navbar showAlert={showAlert}/>
-        <Alert alert={alert} />
-        <div className="container" >
-        <Routes>
-          <Route path="/" element={localStorage.getItem("token") ? <Home showAlert={showAlert} />: <Navigate to="/login" replace />}/>
-          <Route path="/about" element={<About />} />
-          <Route path="/login" element={<Login showAlert={showAlert}/>} />
-        </Routes>
-      </div>
-      </div>
-      <Footer/>
-      </Router>
-    </NoteStates>
+  <NoteStates>
+    <Router>
+      <Navbar showAlert={showAlert} />
+
+      <Routes>
+        <Route path="/" element={localStorage.getItem("token") ? (<div style={{ backgroundColor: "#F9FAFB", minHeight: "100vh" }}><Alert alert={alert} /><div className="container"><Home showAlert={showAlert} /> </div></div>) : (<Navigate to="/login" replace />)}/>
+        <Route path="/about" element={<><Alert alert={alert} /><About /></>}/>
+        <Route path="/login" element={<div style={{ backgroundColor: "#F9FAFB", minHeight: "100vh" }}><Alert alert={alert} /><div className="container"><Login showAlert={showAlert} /></div></div>}/>
+          </Routes>
+      {localStorage.getItem("token") && <Footer />}
+    </Router>
+  </NoteStates>
   );
 }
 

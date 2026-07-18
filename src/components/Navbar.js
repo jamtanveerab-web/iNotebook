@@ -26,11 +26,12 @@ const Navbar = (props) => {
           {localStorage.getItem('token') ? <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <Link className={`nav-link ${location.pathname === "/" ? "active" : ""}`} aria-current="page" to="/">Home</Link>
-            </li>
+            </li>   </ul> : "" }
+         
             <li className="nav-item">
               <Link className={`nav-link ${location.pathname === "/about" ? "active" : ""}`} to="/about">About</Link>
             </li>
-          </ul> : ""}
+          
           {!localStorage.getItem('token') ? <div className="w-100 d-flex justify-content-center mt-2 justify-content-lg-end">
             <form className="d-flex">
               <button type="button"className="btn hoovr" data-bs-toggle="modal" data-bs-target="#loginModal"> Login</button>

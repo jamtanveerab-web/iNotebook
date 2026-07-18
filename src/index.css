@@ -14,3 +14,54 @@ code {
 i{
   cursor: pointer;
 }
+.timeline {
+    position: relative;
+    margin-left: 10px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #d8d8ff;
+}
+
+.timeline-item {
+    position: relative;
+    display: flex;
+    gap: 35px;
+    margin-bottom: 55px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: #5d5dfb;
+    border-radius: 50%;
+    z-index: 2;
+    flex-shrink: 0;
+}
+
+.content {
+    margin-top: -6px;
+}
+
+.content small {
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+.content p {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-weight: bold;
+}
